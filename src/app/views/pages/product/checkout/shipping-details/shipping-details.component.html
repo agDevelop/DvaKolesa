@@ -1,0 +1,143 @@
+<div class="container mt-3">
+  <div class="col-md order-md-1">
+    <h4 class="mb-3">Адрес доставки</h4>
+    <form
+      class="needs-validation"
+      #userDetailsForm="ngForm"
+      (ngSubmit)="updateUserDetails(userDetailsForm)"
+    >
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="firstName">Имя</label>
+          <input
+            type="text"
+            class="form-control"
+            id="firstName"
+            [(ngModel)]="userDetail.firstName"
+            name="firstName"
+            required
+          />
+          <div class="invalid-feedback">
+            Необходимо заполнить
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="lastName">Фамилия</label>
+          <input
+            type="text"
+            class="form-control"
+            id="lastName"
+            [(ngModel)]="userDetail.lastName"
+            name="lastName"
+            required
+          />
+          <div class="invalid-feedback">
+            Необходимо заполнить
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="email"
+          >Email
+          <span class="text-muted">(Опционально)</span>
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          id="email"
+          name="email"
+          [disabled]="false"
+        />
+        <div class="invalid-feedback">
+          Необходимо заполнить
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="address">Адрес</label>
+        <input
+          type="text"
+          class="form-control"
+          id="address"
+          placeholder="1234 Main St"
+          [(ngModel)]="userDetail.address1"
+          name="address1"
+          required
+        />
+        <div class="invalid-feedback">
+          Необходимо заполнить
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="address2"
+          >Адрес 2
+          <span class="text-muted">(Опционально)</span>
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          id="address2"
+          placeholder="Apartment or suite"
+          [(ngModel)]="userDetail.address2"
+          name="address2"
+        />
+      </div>
+
+      <div class="row">
+        <div class="col-md-5 mb-3">
+          <label for="country">Страна</label>
+          <select
+            class="custom-select d-block w-100"
+            id="country"
+            required
+            [(ngModel)]="userDetail.country"
+            name="country"
+          >
+            <option value="">Выбрать...</option>
+            <option>Россия</option>
+          </select>
+          <div class="invalid-feedback">
+            Необходимо заполнить
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="state">Область</label>
+          <select
+            class="custom-select d-block w-100"
+            id="state"
+            [(ngModel)]="userDetail.state"
+            name="state"
+            required
+          >
+            <option value="">Выбрать...</option>
+            <option>Москва</option>
+          </select>
+          <div class="invalid-feedback">
+            Необходимо заполнить
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="zip">Индекс</label>
+          <input
+            type="text"
+            class="form-control"
+            id="zip"
+            placeholder=""
+            [(ngModel)]="userDetail.zip"
+            name="zip"
+            required
+          />
+          <div class="invalid-feedback">
+            Необходимо ввести индекс
+          </div>
+        </div>
+      </div>
+      <hr class="mb-4" />
+      <button class="btn btn-primary btn-lg btn-block" type="submit">
+        Продолжить заполнение
+      </button>
+    </form>
+  </div>
+</div>
