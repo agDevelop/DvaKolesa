@@ -62,7 +62,7 @@
             -LRSkWxGAKQAFZmyfsx6
                 -createdOn: "1542046725"
                 -email: "EMAIL_ID"
-                -isAdmin: false      <--- Change this to true
+                -isAdmin: false      <- true
                 ...
     ```
 
