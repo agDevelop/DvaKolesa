@@ -39,5 +39,4 @@ Thumbs.db
 
 #Personal Config
 /src/environments/firebase.ConfigDummy.ts
-firebase.json
 .travis.yml
