@@ -62,7 +62,7 @@ export class ProductService {
   addFavouriteProduct(data: Product): void {
     const a: Product[] = JSON.parse(localStorage.getItem("avf_item")) || [];
     a.push(data);
-    this.toastrService.wait("Adding Product", "Adding Product as Favourite");
+    this.toastrService.wait("Добавление продукта", "Продукт добавлен в список желаемых товаров!");
     setTimeout(() => {
       localStorage.setItem("avf_item", JSON.stringify(a));
     }, 1500);
@@ -105,8 +105,8 @@ export class ProductService {
     a.push(data);
 
     this.toastrService.wait(
-      "Adding Product to Cart",
-      "Product Adding to the cart"
+      "Добавление в корзину",
+      "Товар добавлен в корзину"
     );
     setTimeout(() => {
       localStorage.setItem("avct_item", JSON.stringify(a));

@@ -98,7 +98,7 @@
                       <span class="right">
                         <a
                           placement="top"
-                          mdbTooltip="Add to Wishlist"
+                          mdbTooltip="В список желаемого"
                           container="body"
                           (click)="addFavourite(product)"
                         >
@@ -106,7 +106,7 @@
                         </a>
                         <a
                           placement="top"
-                          mdbTooltip="Add to Cart"
+                          mdbTooltip="В корзину"
                           container="body"
                           (click)="addToCart(product)"
                         >
@@ -114,7 +114,7 @@
                         </a>
                         <a
                           placement="top"
-                          mdbTooltip="Remove Product"
+                          mdbTooltip="Удалить продукт"
                           container="body"
                           *ngIf="authService.isAdmin$ | async"
                           (click)="removeProduct(product.$key)"

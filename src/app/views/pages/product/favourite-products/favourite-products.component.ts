@@ -11,8 +11,8 @@ export class FavouriteProductsComponent implements OnInit {
   showDataNotFound = true;
 
   // Not Found Message
-  messageTitle = "No Favourite Products Found";
-  messageDescription = "Please, choose your favourite products";
+  messageTitle = "Желаемых товаров не найдено";
+  messageDescription = "Пожалуйста, выберите желаемые товары!";
 
   constructor(private productService: ProductService) {}
 
